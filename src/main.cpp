@@ -8,7 +8,7 @@ BH1750 lightMeter;
 void setup() {
   Serial.begin(115200);
   delay(200);
-  Wire.begin(PIN_SDA, PIN_SCL, 100000);
+  Wire.begin(PIN_SDA, PIN_SCL);
   lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE, 0x23, &Wire);
   Serial.println("System ready...");
 }
